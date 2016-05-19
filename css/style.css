@@ -1,0 +1,43 @@
+/*Desktop*/
+body								{ margin:0; padding:0; }
+img									{ border:none; }
+#responder 							{ left: -5000px; position: absolute; z-index: 1; }	
+.inner								{ width:1000px; background:#1a1a1a; margin:0 auto; position:relative; }
+#slider								{ display:block;  margin:0 auto; position:relative; overflow:hidden; opacity:0; }
+#rail_viewport						{ background:#000; overflow:hidden; position:relative; margin:0 auto; }
+.rail								{ position:absolute; left:0; top:0; }
+.slide								{ float:left; position:relative; width:1000px; height:auto; }
+.slide img							{ width:100%; display:block; }
+.slide_desc							{ background-color: rgba(0, 0, 0, 0.5); position:absolute; bottom:10%; left:0; z-index:1; width:50%; display:none; }
+.slide_desc	p						{ color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:20px; margin:0; }
+.prev								{ position:absolute; z-index:2; left:20px; display:block; }
+.next								{ position:absolute; z-index:2; right:20px; display:block; }
+#slider_nav_dots					{ position:absolute; z-index:2; bottom:10px; left:1%; }
+.nav_dot							{ background:#fff; width:15px; height:15px; border-radius:20px; display:block; float:left; margin:0px 10px 0px 0px; opacity:.4; -webkit-transition:all .3s; }
+.nav_dot:hover						{ opacity:1; }
+.active_dot							{ opacity:1; }
+.slide_thumb						{ -webkit-transition:all .3s; display:block; width:100px; height:55px; float:left; opacity:.5; overflow:hidden; }
+.slide_thumb:hover					{ opacity:1; }
+.slide_thumb_active					{ opacity:1; }
+#slider_thumbnail_container			{ position:relative; }
+#thumbnail_viewport					{ max-width:100%; position:relative; height:55px; overflow:auto; }
+#thumbnail_rail						{ position:absolute; top:0; left:0; }
+.slide_thumb img					{ width:100%; }
+#thumb_next							{ display:block; position:absolute; right:1%; top:10px; height:35px; width:10px; background:url(../images/next_arrow.png) no-repeat; background-size:cover; }
+#thumb_prev							{ display:block; position:absolute; left:1%; top:10px; height:35px; width:10px; background:url(../images/prev_arrow.png) no-repeat; background-size:cover; }
+#mCSB_1_container					{ min-height:55px; }
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+#responder 							{ z-index: 10; }	
+.inner								{ width:700px; }	
+.slide								{ width:100%; }
+}
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+#responder 							{ z-index: 20; }	
+.inner								{ width:90%; }	
+.slidenav							{ width:5%; max-width:30px;}	
+.slidenav img						{ width:100%; }
+.slide_desc							{ display:none; }
+.slide								{ width:100%; }
+}
